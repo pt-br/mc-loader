@@ -5,7 +5,7 @@ Original idea and v1.0 creator: [Douglas Hipolito](https://github.com/douglaship
 
 Thanks to [William Lima](https://github.com/williammustaffa) for the support.
 
-What does this extension do?
+What this extension do?
 ---
 It injects the _experience.js_ script from [MoovCheckout](http://www.moovweb.com/moovcheckout/) to a determined site, this way, you don't have to run a _moov server_ instance, only the optimize server.
 
