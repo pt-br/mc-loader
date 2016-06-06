@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset = "utf-8" />
+  <link href="../vendor/switchery.min.css" type="text/css" rel="stylesheet">
+  <style type="text/css">
+    #mainPopup {
+      padding: 10px;
+      height: 200px;
+      width: 400px;
+      font-family: Helvetica, Ubuntu, Arial, sans-serif;
+    }
+    .optionTitle {
+      display: inline-block;
+      margin: 0 0 10px 0;
+      line-height: 32px;
+    }
+    .optionContainer {
+      float: right;
+      display: inline-block;
+    }
+    #urlForm {
+      margin: 10px 0;
+    }
+    #parentRunning {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    #runningProject {
+      font-weight: bold;
+      color: #02AADC;
+    }
+    #description {
+      font-style: italic;
+    }
+    #descriptionDetail {
+      color: #02AADC;
+    }
+    #projectUrl {
+      border-radius: 4px;
+      width: 260px;
+      padding: 8px;
+      font-size: 12px;
+      margin-top: 4px;
+      color: #0B84A9;
+      font-weight: bold;
+    }
+    #submitUrl {
+      padding: 10px;
+      border: none;
+      border-radius: 3px;
+      color: white;
+      background: #0D82A5;
+    }
+    .hide {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+  <div id="mainPopup">
+    <h2 class="optionTitle">MoovCheckout Script Loader</h2>
+    <div id="switchContainer" class="optionContainer">
+      <input id="switch" type="checkbox" class="js-switch">
+    </div>
+    <div class="hide">
+      <h4 class="optionTitle">Remove MC production script if exists?</h4>
+      <div id="removeProdScriptContainer" class="optionContainer">
+        <input id="removeProdScript" type="checkbox" class="js-switch">
+      </div>
+    </div>
+    <br>
+    <h4 class="optionTitle">Inject Workbench</h4>
+    <div id="injectWorkbenchContainer" class="optionContainer">
+      <input id="injectWorkbenchScript" type="checkbox" class="js-switch">
+    </div>
+    <div id="description">
+      Insert full or partial URL of the project you want to run MoovCheckout. It'll be a regex, so don't  worry about
+      <span id="descriptionDetail">http/https/www</span>.
+    </div>
+    <form id="urlForm" method="post">
+      <label for="projectUrl">URL/Partial URL</label>
+      <br>
+      <input type="text" id="projectUrl" name="projectUrl" placeholder="e.g. rainbowshops/www.rainbowshops.com">
+      <input id="submitUrl" type="submit" value="Update">
+    </form>
+    <div id="parentRunning">Current project running: <span id="runningProject">None</span></div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="jquery-1.12.3.min.js" type="text/javascript"></script>
+  <script src="../vendor/switchery.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
